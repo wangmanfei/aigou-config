@@ -1,0 +1,34 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+server:
+  port: 8888
+# max-http-header-size: 4048576 #Request header is too large异常解决
+spring:
+  application:
+    name: COMMON-PRIVODER
+  profiles: dev
+eureka:
+  instance:
+    hostname: localhsot
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+---
+server:
+  port: 8889
+# max-http-header-size: 4048576 #Request header is too large异常解决
+spring:
+  application:
+    name: COMMON-PRIVODER-TEST
+  profiles: test
+eureka:
+  instance:
+    hostname: localhsot
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
