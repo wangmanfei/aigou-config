@@ -20,9 +20,6 @@ eureka:
 feign:
   hystrix:
     enabled: true #开启熔断支持
-ribbon:
-  ReadTimeout: 20000
-  ConnectTimeout: 20000
 ---
 server:
   port: 8889
