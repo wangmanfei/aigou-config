@@ -5,7 +5,7 @@ spring:
 ---
 server:
   port: 8888
-# max-http-header-size: 4048576 #Request header is too large异常解决
+  max-http-header-size: 4048576 #Request header is too large异常解决
 spring:
   application:
     name: COMMON-PRIVODER
@@ -17,10 +17,13 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/
+feign:
+  hystrix:
+    enabled: true #开启熔断支持
 ---
 server:
   port: 8889
-# max-http-header-size: 4048576 #Request header is too large异常解决
+  max-http-header-size: 4048576 #Request header is too large异常解决
 spring:
   application:
     name: COMMON-PRIVODER-TEST
@@ -32,3 +35,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/
+feign:
+  hystrix:
+    enabled: true #开启熔断支持
