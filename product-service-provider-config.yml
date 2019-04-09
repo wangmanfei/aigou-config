@@ -18,6 +18,10 @@ spring:
     url: jdbc:mysql:///aigou
     username: root
     password: 123456
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 127.0.0.1:9300
 mybatis-plus:
   mapper-locations: classpath:cn/itsource/aigou/mapper/*Mapper.xml
   type-aliases-package: cn.itsource.aigou.domain,cn.itsource.aigou.query
