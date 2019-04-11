@@ -10,6 +10,10 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka
 spring:
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      cluster-nodes: 127.0.0.1:9300
   application:
     name: product-provider
   profiles: dev
